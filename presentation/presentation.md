@@ -1,0 +1,14 @@
+-Intro (5 min)
+- Management of containers using PowerShell (12 min)
+    - Gotchas
+    - JSON output (convertto/from-json) (PRI!)
+        - thin wrappers for often-used docker commands (start of module published to gallery)
+    - Docker build
+- Using PowerShell inside containers (12 min)
+    - Windows containers running Windows Nano
+    - Linux containers
+    - Image2Docker (backup)
+- Windows & Linux containers side-by-side (12 min)
+    - PowerShell Universal Dashboard running on both Linux and Windows
+    - spin up front-end + back-end (one on linux, one on windows) and show they communicate (maybe)
+Wrapup (4 min)
