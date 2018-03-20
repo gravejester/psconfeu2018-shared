@@ -26,4 +26,4 @@ docker volume ls -q | foreach {
 docker volume ls
 
 # Remote machine where Image2Docker is run
-dir D:\temp\Image2DockerDemo | Remove-Item -Recurse -Force
+# dir D:\temp\Image2DockerDemo | Remove-Item -Recurse -Force
