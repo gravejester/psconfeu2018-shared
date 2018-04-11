@@ -1,5 +1,5 @@
 ﻿Function Get-DockerContainer {
-
-    docker ps --format '{{json .}}' | ConvertFrom-Json
+    
+    docker ps --all --format '{{json .}}' | ConvertFrom-Json
 
 }
