@@ -36,7 +36,7 @@ Import-Module -Name posh-docker
 
 # docker -> Tab from console
 
-# That`s nice, but wrappers for Docker CLI is what we was looking for
+# That`s nice, but wrappers for Docker CLI is what we was looking for - let`s try out a few
 
 #region PSDockerHub
 
@@ -56,10 +56,13 @@ Find-Module -Name DockerPowershell
 Install-Module -Name DockerPowershell
 Get-Command -Module DockerPowershell
 
-Get-ContainerId
-Get-ContainerIp -ContainerId 34c1e89a9a57
+$ContainerId = Get-ContainerId | Select-Object -First 1
+Get-ContainerIp -ContainerId $ContainerId
 
 Get-Content function:Invoke-DockerCommand
+Get-Content function:Invoke-DockerPs
+
+Invoke-DockerPs -Arguments --all
 
 #endregion
 
@@ -78,7 +81,9 @@ Get-DockerVolume
 
 #endregion
 
-# Other useful Docker-related PowerShell modules
+#region Other useful Docker-related PowerShell modules
+
 Install-Module -Name DockerDsc
 Get-DscResource -Module DockerDsc
 
+#endregion
