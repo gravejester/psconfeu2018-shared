@@ -1,4 +1,4 @@
-﻿Import-Module 'C:\dashboards\UniversalDashboard\1.4.2\UniversalDashboard.psd1'
+﻿Import-Module 'C:\dashboards\UniversalDashboard\1.5.3\UniversalDashboard.psd1'
 
 if (-not (Get-UDLicense)) {
 
