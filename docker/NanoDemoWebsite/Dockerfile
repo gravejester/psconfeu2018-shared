@@ -41,9 +41,9 @@ RUN setx PATH "%PATH%;%ProgramFiles%\PowerShell"
 
 SHELL ["pwsh", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
-RUN pwsh -command mkdir C:\dashboards
+RUN mkdir C:\dashboards
 
-RUN pwsh -command Save-Module -Name UniversalDashboard -Path C:\dashboards -Force
+RUN Save-Module -Name UniversalDashboard -Path C:\dashboards -Force
 
 COPY ["dashboard.ps1", "c:/dashboards/dashboard.ps1"]
 

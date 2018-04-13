@@ -1,8 +1,6 @@
 break #Safety net. This script is supposed to be run line by line interactively, not all at once.
 
-cd ~\Git\psconfeu2018-shared\docker
-
-#region PowerShell scripts in Docker-files
+#region PowerShell commands and scripts in Docker-files
 
 <#
 
@@ -32,6 +30,8 @@ Source: https://docs.docker.com/engine/reference/builder/
 
 #>
 
+cd ~\Git\psconfeu2018-shared\docker
+
 # Let`s have a look at a Docker-file where PowerShell is leveraged
 Open-EditorFile -Path .\NanoDemoWebsite\Dockerfile
 
@@ -55,6 +55,9 @@ docker stop $ContainerID
 
 #region PowerShellGet - also available in PowerShell Core - can be used inside containers for downloading scripts either from the PowerShell Gallery or a local repository
 
-Install-Script
+Start-Process -FilePath powershell -ArgumentList "/c docker run -it microsoft/powershell:6.0.2-nanoserver-1709 pwsh"
+
+Install-Script -Name Get-Weather -Scope CurrentUser
+Get-Weather -City Hanover
 
 #endregion
