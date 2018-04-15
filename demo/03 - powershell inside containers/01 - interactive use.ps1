@@ -13,7 +13,7 @@ docker pull microsoft/iis
 docker pull microsoft/powershell
 docker pull microsoft/powershell:nanoserver
 docker pull microsoft/powershell:6.0.2-nanoserver-1709
-docker pull microsoft/powershell:centos7 --platform=linux #--platform=linux is an experimental feature per April 2018
+docker pull microsoft/powershell:centos7 --platform=linux
 
 #endregion
 
