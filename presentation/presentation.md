@@ -1,6 +1,5 @@
 -Intro (5 min) [**jer + øk**]
 - Management of containers using PowerShell (12 min)
-    - Gotchas [**øk**]
     - JSON output (convertto/from-json) (PRI!) [**jer**]
         - thin wrappers for often-used docker commands (start of module published to gallery) [**jer**]
     - Docker build [**øk**]
